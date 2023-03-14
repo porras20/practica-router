@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-export const Rey = ({}) => {
+export const Rey = () => {
     let dato = useParams();
     let {nombre} = dato;
 
@@ -10,7 +10,7 @@ export const Rey = ({}) => {
       }
     return ( 
        <div className="rey">
-            <img src={`../../rey_${removeAccents(nombre.toLowerCase())}.png`} alt="" />
+            <img src={`../../rey_${removeAccents(nombre.toLowerCase())}.png`}  alt="" />
             <h1>{nombre}</h1>
        </div>
      );

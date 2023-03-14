@@ -43,11 +43,12 @@ function App() {
     <BrowserRouter>
       <Nav  reyes={reyes}/>
       <Routes>
-        <Route path='/Home' element={<Home reyes={reyes}/>}></Route>
+        <Route path='/' element={<Home reyes={reyes}/>}></Route>
+        <Route path='/home' element={<Home reyes={reyes}/>}></Route>
         {reyes.map(rey=>(
-          <Route path=':nombre' element={<Rey />}></Route>
+          <Route path=':nombre' element={<Rey />} key={rey.reinado}></Route>
         ))}
-        {/* <Route path='*' element={<Error404 />}></Route> */}
+        <Route path='/*' element={<Error404 />}></Route>
       </Routes>
     </BrowserRouter>
   )
